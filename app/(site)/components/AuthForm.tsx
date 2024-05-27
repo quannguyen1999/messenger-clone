@@ -10,7 +10,7 @@ import { BsGithub, BsGoogle } from 'react-icons/bs';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { signIn, useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 type variant = 'LOGIN' | 'REGISTER';
 const AuthForm = () => {

@@ -6,7 +6,7 @@ async function Sidebar({children}: {
     children: React.ReactNode;
 }) {
     const currentUser = await getCurrentUser();
-    console.log(currentUser)
+    // console.log(currentUser)
     return (
         <div className="h-full">
             <DesktopSidebar currentUser={currentUser!}/>

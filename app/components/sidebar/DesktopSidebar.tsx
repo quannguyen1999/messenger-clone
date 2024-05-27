@@ -13,7 +13,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
 }) => {
     const routes = useRoutes();
     const [isOpen, setIsOpen] = useState(false);
-    console.log({currentUser})
+    // console.log({currentUser})
     return (
         <div className="hidden
             lg:fixed

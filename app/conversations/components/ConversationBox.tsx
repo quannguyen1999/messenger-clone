@@ -79,7 +79,13 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
             )}
 
         >
-            <Avatar user={otherUser} />
+            {/* TODO */}
+            {/* {data.isGroup ? (
+                <AvatarGroup users={data.users} />
+            ) : ( */}
+                <Avatar user={otherUser} />
+            {/* )} */}
+           
             <div className='min-w-0 flex-1'>
                 <div className='focus:outline-none'>
                     <div className='

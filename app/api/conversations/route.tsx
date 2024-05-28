@@ -5,7 +5,9 @@ import prisma from '@/app/libs/prismadb';
 export async function POST(
     request: Request
 ) {
+    console.log("fuck")
     try{
+        
         const currentUser = await getCurrentUser();
         const body = await request.json();
         const {
@@ -87,6 +89,7 @@ export async function POST(
 
         return NextResponse.json(newConversation);
     }  catch (error: any){
+        console.log("error")
         return new NextResponse('Internal Error', {status: 500});
     }
 }

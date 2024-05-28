@@ -3,13 +3,14 @@ import getMessages from "@/app/actions/getMessages";
 import EmptyState from "@/app/components/EmptyState";
 import Header from "./component/Header";
 import Body from "./component/Body";
-import { Form } from "react-hook-form";
+import Form from "./component/Form";
 
 interface IParams {
     conversationId: string;
 }
 
 const conversationId = async ({params}: {params: IParams}) => {
+    console.log("fuck")
     const conversation = await getConversationById(params.conversationId);
     const messages = await getMessages(params.conversationId);
     if(!conversation){

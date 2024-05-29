@@ -18,6 +18,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
     users
 }) => {
     const [items, setItems] = useState(initialItems);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const router = useRouter();
     const {conversationId, isOpen} = useConversation();
     return (
@@ -63,7 +64,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
                                 transition
                             "
                         >
-                            <MdOutlineGroupAdd size={20}/>
+                            <MdOutlineGroupAdd size={20} onClick={() => setIsModalOpen(true)}/>
                         </div>
                     </div>
                     {items.map((item) => (

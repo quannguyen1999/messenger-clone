@@ -2,6 +2,7 @@ import getConversation from "../actions/getConversation"
 import Sidebar from "../components/sidebar/Sidebar"
 import ConversationList from "./components/ConversationList"
 import getUsers from '../actions/getUsers';
+
 export default async function ConversationsLayout({
     children
 }: {

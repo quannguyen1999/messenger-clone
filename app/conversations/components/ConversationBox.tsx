@@ -20,9 +20,6 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
     const otherUser = useOtherUser(data);
     const session = useSession();
     const router = useRouter();
-
-    // console.log(otherUser)
-
     const handlerClick = useCallback(() => {
         router.push(`/conversations/${data.id}`);
     }, [data.id, router]);
@@ -59,6 +56,8 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
         return 'Started a conversation';
 
     }, [lastMessage]);
+
+
     
     return (
         <div
@@ -76,7 +75,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
                 p-3
                 
             `,
-            selected ? 'bg-neutral-100' : 'bg-white'
+            selected ? 'bg-neutral-100' : ' bg-white'
             )}
 
         >    
@@ -100,7 +99,8 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
                             font-medium
                             text-gray-900
                             '>
-                            {data.name}
+                                
+                            {otherUser != null && data.name == null ? otherUser.name : data.name}
                         </p>
                         {lastMessage?.createdAt && (
                             <p

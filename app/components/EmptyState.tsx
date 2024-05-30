@@ -10,7 +10,7 @@ const EmptyState = () => {
                 flex
                 justify-center
                 items-center
-                bg-gray-100
+                bg-white
             ">
                 <div className="text-center items-center flex flex-col">
                     <h3
